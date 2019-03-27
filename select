@@ -1,0 +1,15 @@
+select * from venda
+select * from produto
+select * from regiao
+select * from cliente
+select * from cidade
+select * from estado
+
+select * from venda
+
+Select r.cod_regiao FROM venda v JOIN cliente c ON v.cod_cliente = c.cod_cliente 
+	JOIN cidade ci ON c.cod_cidade = ci.cod_cidade 
+	JOIN estado e ON ci.uf = e.uf
+	JOIN regiao r ON e.cod_regiao = r.cod_regiao
+	WHERE c.cod_cliente = 1
+	
